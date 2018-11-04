@@ -146,7 +146,8 @@ else
 endif
 
 " var, const
-if go#config#FoldEnable('varconst')
+" if go#config#FoldEnable('varconst')
+if 0
   syn region    goVar               start='var ('   end='^\s*)$' transparent fold
                         \ contains=ALLBUT,goParen,goBlock,goFunction,goTypeName,goReceiverType,goReceiverVar,goArgumentName,goArgumentType,goSimpleArguments,goPointerOperator
   syn region    goConst             start='const (' end='^\s*)$' transparent fold

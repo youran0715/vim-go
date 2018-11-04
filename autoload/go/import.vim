@@ -158,12 +158,12 @@ function! go#import#SwitchImport(enabled, localname, path, bang) abort
     else
       if appendline == packageline
         call append(appendline + 0, '')
-        call append(appendline + 1, 'import (')
-        call append(appendline + 2, ')')
-        let appendline += 2
-        let linesdelta += 3
-        let appendstr = qlocalpath
-        let indentstr = 1
+        " call append(appendline + 1, 'import (')
+        " call append(appendline + 2, ')')
+        let appendline += 1
+        " let linesdelta += 3
+        let appendstr = 'import ' . qlocalpath
+        " let indentstr = 1
         call append(appendline, appendstr)
       elseif getline(appendline) =~# '^import\s\+(\+)'
         call setline(appendline, 'import (')
